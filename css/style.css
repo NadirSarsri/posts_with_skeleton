@@ -30,7 +30,7 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   max-width: 1330px;
   margin: auto;
 }
@@ -43,7 +43,7 @@ h1 {
   width: 20em;
   margin-bottom: 1rem;
   overflow: hidden;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
 }
 
 .post-img {
