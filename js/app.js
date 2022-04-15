@@ -38,6 +38,13 @@ function handlePosts(array) {
       newPost.replaceChild(postImg, postImgContainer);
       const xhttp = new XMLHttpRequest();
 
+      const postTitle = newPost.querySelector(".post-title");
+      postTitle.classList.remove("animate");
+      const postText = newPost.querySelector(".post-text");
+      postTitle.innerHTML = post.title;
+      postText.innerHTML = post.body;
+      posts.appendChild(newPost);
+
       xhttp.open("get", "https://picsum.photos/1920/1080", true);
 
       xhttp.send();
@@ -51,12 +58,8 @@ function handlePosts(array) {
             modal.querySelector(".modal-title").innerHTML =
               newPost.querySelector(".post-title").innerHTML;
           });
-          const postTitle = newPost.querySelector(".post-title");
-          postTitle.classList.remove("animate");
-          const postText = newPost.querySelector(".post-text");
-          postTitle.innerHTML = post.title;
-          postText.innerHTML = post.body;
-          posts.appendChild(newPost);
+
+          // posts.appendChild(newPost);
         }
       };
     }
